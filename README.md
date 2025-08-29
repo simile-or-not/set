@@ -1,9 +1,8 @@
 # set
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![GitHub release](https://img.shields.io/github/v/release/barrust/set.svg)](https://github.com/barrust/set/releases)
-[![C/C++ CI](https://github.com/barrust/set/workflows/C/C++%20CI/badge.svg?branch=master)](https://github.com/barrust/set/actions)
-[![codecov](https://codecov.io/gh/barrust/set/branch/master/graph/badge.svg)](https://codecov.io/gh/barrust/set)
+[![GitHub release](https://img.shields.io/github/v/release/simile-or-not/set.svg)](https://github.com/simile-or-not/set/releases)
+[![C/C++ CI](https://github.com/simile-or-not/set/workflows/C/C++%20CI/badge.svg?branch=master)](https://github.com/simile-or-not/set/actions)
 
 A simple set implementation in **C**
 
@@ -13,9 +12,6 @@ This implementation provides a simple and generally quick method to get set func
 
 To use the library, copy the `src/set.h` and `src/set.c` files into your project and include it where needed.
 
-## License
-MIT 2016
-
 # Main Features
 
 * Union, intersection, difference, and semantic difference
@@ -23,10 +19,10 @@ MIT 2016
 * Simple method to change the hashing function if desired
 * Add, check, and remove elements in a the set
 
-## Future Enhancements
+## Now working on:
 
-* In place union - add to an already created Set
-* Print statistics about the set
+* Support for all types
+* Compatibility with std::set from C++
 
 
 ## Usage:

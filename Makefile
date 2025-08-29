@@ -1,4 +1,4 @@
-CC=gcc
+CC=clang
 COMPFLAGS=-Wall -Wpedantic -Winline -Wextra -Wno-long-long
 SRCDIR=src
 DISTDIR=dist

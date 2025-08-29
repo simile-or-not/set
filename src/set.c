@@ -1,11 +1,16 @@
 /*******************************************************************************
 ***
-***     Author: Tyler Barrus
+***     Original author: Tyler Barrus
 ***     email:  barrust@gmail.com
 ***
-***     Version: 0.2.0
+***     New author: Simile (or not?)
+***
+***     Version: 0.2.1 (beta)
+***     Purpose: Simple, yet effective, set implementation
 ***
 ***     License: MIT 2016
+***
+***     URL: https://github.com/simile-or-not/set
 ***
 *******************************************************************************/
 

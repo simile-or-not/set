@@ -1,16 +1,17 @@
-#ifndef BARRUST_SIMPLE_SET_H__
-#define BARRUST_SIMPLE_SET_H__
+#pragma once
 /*******************************************************************************
 ***
-***     Author: Tyler Barrus
+***     Original author: Tyler Barrus
 ***     email:  barrust@gmail.com
 ***
-***     Version: 0.2.0
+***     New author: Simile (or not?)
+***
+***     Version: 0.2.1 (beta)
 ***     Purpose: Simple, yet effective, set implementation
 ***
 ***     License: MIT 2016
 ***
-***     URL: https://github.com/barrust/set
+***     URL: https://github.com/simile-or-not/set
 ***
 *******************************************************************************/
 
@@ -204,5 +205,3 @@ int set_cmp(SimpleSet *left, SimpleSet *right);
 #ifdef __cplusplus
 } // extern "C"
 #endif
-
-#endif /* END SIMPLE SET HEADER */
