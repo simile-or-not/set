@@ -70,7 +70,7 @@ int set_destroy(SimpleSet *set);
         SET_MALLOC_ERROR if unable to grow the set
     NOTE: SET_CIRCULAR_ERROR should never happen, but is there for insurance!
 */
-int set_add(SimpleSet *set, const char *key);
+int set_add(SimpleSet *set, const void *key);
 
 /*  Remove element from the set
 

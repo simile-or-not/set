@@ -17,14 +17,15 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <stdarg.h>
 #include "set.h"
 
 #define MAX_FULLNESS_PERCENT 0.25       /* arbitrary */
 
 /* PRIVATE FUNCTIONS */
 static uint64_t __default_hash(const char *key);
-static int __get_index(SimpleSet *set, const char *key, uint64_t hash, uint64_t *index);
-static int __assign_node(SimpleSet *set, const char *key, uint64_t hash, uint64_t index);
+static int __get_index(SimpleSet *set, const void *key, uint64_t hash, uint64_t *index);
+static int __assign_node(SimpleSet *set, const void *key, uint64_t hash, uint64_t index);
 static void __free_index(SimpleSet *set, uint64_t index);
 static int __set_contains(SimpleSet *set, const char *key, uint64_t hash);
 static int __set_add(SimpleSet *set, const char *key, uint64_t hash);
@@ -69,7 +70,7 @@ int set_destroy(SimpleSet *set) {
     return SET_TRUE;
 }
 
-int set_add(SimpleSet *set, const char *key) {
+int set_add(SimpleSet *set, const void *key) {
     uint64_t hash = set->hash_function(key);
     return __set_add(set, key, hash);
 }
@@ -277,7 +278,7 @@ static int __set_add(SimpleSet *set, const char *key, uint64_t hash) {
     return res;
 }
 
-static int __get_index(SimpleSet *set, const char *key, uint64_t hash, uint64_t *index) {
+static int __get_index(SimpleSet *set, const void *key, uint64_t hash, uint64_t *index) {
     uint64_t i, idx;
     idx = hash % set->number_nodes;
     i = idx;
@@ -298,7 +299,7 @@ static int __get_index(SimpleSet *set, const char *key, uint64_t hash, uint64_t 
     }
 }
 
-static int __assign_node(SimpleSet *set, const char *key, uint64_t hash, uint64_t index) {
+static int __assign_node(SimpleSet *set, const void *key, uint64_t hash, uint64_t index) {
     size_t len = strlen(key);
     set->nodes[index] = (simple_set_node*)malloc(sizeof(simple_set_node));
     set->nodes[index]->_key = (char*)calloc(len + 1, sizeof(char));
